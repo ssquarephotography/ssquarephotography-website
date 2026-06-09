@@ -1,1 +1,0 @@
-# SSQUARE Photography Website
