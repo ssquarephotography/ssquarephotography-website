@@ -2,21 +2,14 @@ backend:
   name: github
   repo: ssquarephotography/ssquarephotography-website
   branch: main
-
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
-
-site_url: "https://www.ssquarephotography.com"
-display_url: "https://www.ssquarephotography.com"
-
 collections:
-  - name: "pages"
-    label: "Website Pages"
-    files:
-      - label: "Home Page"
-        name: "home"
-        file: "content/home.md"
-        fields:
-          - { label: "Main Heading", name: "title", widget: "string" }
-          - { label: "Intro Text", name: "intro", widget: "text" }
-          - { label: "Phone", name: "phone", widget: "string" }
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
